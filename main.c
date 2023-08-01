@@ -1,8 +1,5 @@
 #include "binary_trees.h"
-<<<<<<< HEAD
 
-=======
->>>>>>> 815172215ac51fb0e0c089dc4f9b4362f5431993
 /**
  * main - Entry point
  *
