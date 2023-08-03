@@ -3,7 +3,7 @@
 /**
  * binary_tree_preorder - binary tree preorder traversal
  * @tree: pointer to tree to traverse
- * @func: user defined binary tree node value printing 
+ * @func: user defined binary tree node value printing
  *
  * Return: nothing
 */
