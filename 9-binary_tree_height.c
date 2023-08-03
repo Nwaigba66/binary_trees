@@ -5,7 +5,6 @@
  * @tree: A pointer to a tree node
  * @height: The current height of the tree being traversed
  * @max: A pointer to the maximum height found so far
- *
  */
 void count_height(const binary_tree_t *tree, size_t height, size_t *max)
 {
