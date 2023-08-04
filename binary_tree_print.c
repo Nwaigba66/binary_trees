@@ -96,8 +96,3 @@ void binary_tree_print(const binary_tree_t *tree)
 		free(s[i]);
 	}
 	free(s);
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> 815172215ac51fb0e0c089dc4f9b4362f5431993
