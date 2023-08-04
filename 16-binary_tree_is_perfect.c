@@ -29,24 +29,6 @@ int binary_tree_h(const binary_tree_t *tree)
 }
 
 /**
- * binary_tree_balance - measures the balance factor of a binary tree
- * @tree: tree to measure the balance factor
- *
- * Return: the balance factor
-*/
-int binary_tree_balance(const binary_tree_t *tree)
-{
-	int left_tree, right_tree;
-
-	if (tree == NULL)
-		return (0);
-	left_tree = binary_tree_h(tree->left);
-	right_tree = binary_tree_h(tree->right);
-
-	return (left_tree - right_tree);
-}
-
-/**
  * binary_tree_is_full - checks fo full binary tree
  * @tree: the tree to be checked
  * Return: 1 if full, 0 otherwise
@@ -71,9 +53,14 @@ int binary_tree_is_full(const binary_tree_t *tree)
 */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
+	int balanced;
+
 	if (tree == NULL)
 		return (0);
-	if (binary_tree_is_full(tree) == 1 && binary_tree_balance(tree) == 0)
+
+	balanced = binary_tree_h(tree->left) - binary_tree_h(tree->right);
+	if (binary_tree_is_full(tree) && balanced == 0)
 		return (1);
-	return (0);
+	else
+		return (0);
 }
