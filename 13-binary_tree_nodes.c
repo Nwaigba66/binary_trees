@@ -6,11 +6,14 @@
 */
 size_t binary_tree_nodes(const binary_tree_t *tree)
 {
+	size_t left_child, right_child, nodes_count;
+	
 	if (tree == NULL)
 		return (0);
-	size_t left_child = (tree->left != NULL);
-	size_t right_child = (tree->right != NULL);
-	size_t nodes_count = left_child || right_child;
+
+	left_child = (tree->left != NULL);
+	right_child = (tree->right != NULL);
+	nodes_count = left_child || right_child;
 
 	nodes_count += binary_tree_nodes(tree->left) + binary_tree_nodes(tree->right);
 	return (nodes_count);
